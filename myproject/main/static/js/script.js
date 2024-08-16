@@ -4,7 +4,6 @@ const countryCards = document.querySelectorAll('.country_card');
 categoryList.addEventListener('click', (event) => {
     const selectedCategory = event.target.dataset.category;
 
-//     // Показываем/скрываем карточки в зависимости от выбранной категории
     countryCards.forEach((card) => {
         const cardCategories = card.dataset.categories.split(' ');
 
@@ -49,7 +48,6 @@ const tourCards = document.querySelectorAll('.tour_card');
 categoryList.addEventListener('click', (event) => {
     const selectedCategory = event.target.dataset.category;
 
-//     // Показываем/скрываем карточки в зависимости от выбранной категории
     tourCards.forEach((card) => {
         const cardCategories = card.dataset.categories.split(' ');
 

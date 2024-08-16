@@ -10,24 +10,24 @@
 {% endblock %}
 
 {% block content %}
-<main>
-<div class="cont h-auto">
-    <div class="top d-flex info row">
-        <div class="img_block col-lg-12">
-            <img src="{% static "/img/tour/" %}{{tour.image_name}}.jpg" class="img-fluid rounded">
-            <div class="map">
-                <p>Здесь будет карта </p>
+    <main>
+        <div class="cont h-auto">
+            <div class="top d-flex info row">
+                <div class="img_block col-lg-12">
+                    <img src="{% static "/img/tour/" %}{{tour.image_name}}.jpg" class="img-fluid rounded">
+                    <div class="map">
+                        <p>Здесь будет карта </p>
+                    </div>
+                </div>
+                <div class="title col-lg-12">
+                    <h3 class="fw-bold">{{tour.name}}</h3>
+                    <div style="display: flex;">
+                        <i class="fa-solid fa-star me-2" style="color: yellow; font-size: 25px;"></i>
+                        <p>{{tour.rating}}</p>
+                    </div>
+                </div>
             </div>
+            <div class="desc mt-3" style="font-family: Comic Sans MS;">{{tour.full_desc}}</div>
         </div>
-        <div class="title col-lg-12">
-            <h3 class="fw-bold">{{tour.name}}</h3>
-            <div style="display: flex;">
-                <i class="fa-solid fa-star me-2" style="color: yellow; font-size: 25px;"></i>
-                <p>{{tour.rating}}</p>
-            </div>
-        </div>
-    </div>
-    <div class="desc mt-3" style="font-family: Comic Sans MS;">{{tour.full_desc}}</div>
-</div>
-</main>
+    </main>
 {% endblock %}
