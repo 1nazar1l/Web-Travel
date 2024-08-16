@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block header_img %}{% endblock  %}
+
+{% block title %}About us{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'about_page.css' %}">
+{% endblock %}
+
+{% block content %}
+    <main>
+        <def class='content'>
+            <h2 class='title'>О проекте</h2>
+            <def class='text_about'>
+              <p>Наш проект был создан в рамках обучения в интернет школе <a href='https://3place.ru/'>"Третье место"</a></p>
+              <p>Сайт был создан исключительно в целях набора опыта работы в групповых проектах</p>
+              <p>Над заданием работала команда из 3 человек (Назар, Костя, Артем)</p>
+            </def>
+          </def>
+    </main>
+{% endblock %}
