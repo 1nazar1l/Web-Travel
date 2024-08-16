@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block header_img %}
+    <img src="{% static "./img/fon.png" %}" alt="">
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+{% block input %}
+
+<div class="header_input">
+    <input type="text" placeholder="Выберите страну для отдыха" id="search-input">
+</div>
+{% endblock %}
+
+{% block content %}
+    <main>
+        {% include "filter.html" with category=category %}
+
+        <div class="content container-fluid country_cards_container row">
+
+            {% for country in countries %}
+
+                <div class="country_card {% if country.id|divisibleby:2 %} country_card_2 {% else %} country_card_1 {% endif %}" data-categories="{% for item in country.category.all %}{{ item.slug }} {% endfor %}">
+
+                    {% if country.id|divisibleby:2 %}
+
+                        <div class="info_block">
+                            <div class="info">
+                                <div class="icons">
+
+                                    {% for item in country.category.all %}
+                                    <i class="fa-solid fa-{{item.icon_url}}"></i>
+                                    {% endfor %}
+
+                                </div>
+                                <p class="name">{{country.name}}</p>
+                                <p class="desc">{{country.short_desc}}</p>
+                            </div>
+                            <a class="btn btn-primary" href="{% url "tours" country.id %}">Выбрать</a>
+                        </div>
+                        <div class="img_block">   
+                            <img src="{% static "/img/country/" %}{{country.image_name}}.jpg" alt="{{country.image_name}}">
+                        </div>
+
+                    {% else %}
+
+                        <div class="img_block">   
+                            <img src="{% static "/img/country/" %}{{country.image_name}}.jpg" alt="{{country.image_name}}">
+                        </div>
+                        <div class="info_block">
+                            <div class="info">
+                                <div class="icons">
+                                    {% for item in country.category.all %}
+                                    <i class="fa-solid fa-{{item.icon_url}}"></i>
+                                    {% endfor %}
+                                </div>
+                                <p class="name">{{country.name}}</p>
+                                <p class="desc">{{country.short_desc}}</p>
+                            </div>
+                            <a class="btn btn-primary" href="{% url "tours" country.id %}">
+                                Выбрать
+                            </a>
+                        </div>
+
+                    {% endif %}
+                    
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock  %}
+
+{% block script %}
+<script src="{% static "./js/script.js" %}"></script>
+{% endblock %}

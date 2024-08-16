@@ -1,0 +1,398 @@
+/* GENERAL */
+
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+li {
+    list-style: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+header {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1; 
+}
+
+header img.logotipe {
+    width: 50px;
+    position: relative;
+}
+
+header .navbar-brand {
+    margin: 0 20px;
+}
+
+.index_header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header_input {
+    margin: auto auto 10px auto;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* place the input on top of the image */
+}
+
+.header_input input {
+    width: 600px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: lightgray;
+    opacity: 70%;
+    caret-color: rgb(90, 193, 228);
+    font-family: "Poppins", sans-serif;
+
+}
+  
+header .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* place the navbar on top of the image */
+}
+
+nav {
+    opacity: 70%;
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    padding: 30px;
+    padding-bottom: 100px;
+    background-color: rgb(185, 230, 245);
+    font-family: "Montserrat", sans-serif;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(26, 26, 26);
+    font-family: "Montserrat", sans-serif;
+    color: rgb(224, 223, 223);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+footer .last p{
+    cursor: pointer;
+}
+
+footer .last p:hover {
+    color: rgb(177, 176, 176);
+}
+
+
+
+/* INDEX.HTML  TOURS.HTML */
+
+main .filter {
+    margin-bottom: 60px;
+}
+
+main .filter p {
+    font-size: bold;
+    font-size: 48px;
+}
+
+main .filter ul {
+    display: flex;
+    padding-left: 0;
+    flex-wrap: wrap;
+}
+
+main .filter ul li {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: fit-content;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+
+main .filter ul li:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+
+/* INDEX.HTML */
+
+main .full_desc {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+main .country_cards_container {
+    display: flex;
+    flex-direction: column;
+}
+
+main .country_card {
+    width: 800px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .country_card .img_block {
+    width: 500px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+main .country_card .img_block img {
+    width: 100%;
+}
+
+main .country_card .icons i {
+    margin-right: 5px;
+}
+
+main .country_card .info_block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+main .country_card .info_block .info {
+    min-width: 260px;
+    max-width: 260px;
+}
+
+main .country_card .info_block .info .name{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+main .country_card .info_block .info .desc{
+    font-size: 16px;
+}
+
+main .country_card_1 .info_block .info{
+    text-align: left;
+}
+
+main .country_card .info_block .btn {
+    margin: auto auto 10px auto;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+main .country_card_2 {
+    margin-left: auto;
+}
+
+main .country_card_2 .info{
+    text-align: right;
+}
+
+
+/* TOURS.HTML */
+
+main .tour_card_content {
+    padding: 20px 10px;
+}
+
+main .tour_card_content .tour_card {
+    width: 100%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+main .tour_card_content .tour_card .img_block {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+main .tour_card_content .tour_card .img_block img {
+    width: 100%;
+}
+
+main .tour_card_content .tour_card .info_block .name {
+    font-size: 28px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+main .tour_card_content .tour_card .info_block .grade_block {
+    display: flex;
+    align-items: center;
+}
+
+main .tour_card_content .tour_card .info_block .btn {
+    margin: auto auto 10px auto;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* TOUR.HTML */
+
+.tour_header {
+    background-image: url('../img/Mir_castle.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+
+main .cont {
+    width: 100%;
+    height: 700px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+@media (max-width: 1024px) {
+    main .tour_card_content .tour_card .img_block img{
+        min-height: 130px;
+        max-height: 170px;
+    }
+}
+
+@media (max-width: 768px) {
+    main .country_card {
+        flex-direction: column;
+    }
+
+    main .country_card_2 {
+        margin: 0;
+        flex-direction: column-reverse;
+    }
+
+    main .country_card {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    main .country_card_2 .info_block .info{
+        text-align: left;
+    }
+
+    main .country_card .info_block .info .icons{
+        margin-top: 10px;
+    }
+
+    main .country_card .info_block .info .icons i {
+        font-size: 30px;
+    }
+
+    main .country_card .info_block .info .desc {
+        font-size: 20px;
+    }
+
+    main .country_card .info_block .info {
+        min-width: 450px;
+        max-width: 450px;
+    }
+
+    main .country_card .info_block .btn,
+    main .tour_card_content .tour_card .info_block .btn {
+        font-size: 30px;
+        padding: 15px 20px;
+    }
+
+    main .country_card .img_block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    footer {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    main .full_desc {
+        font-size: 12px;
+    }
+
+    main .country_card .info_block .info .icons i {
+        font-size: 20px;
+    }
+
+    main .country_card .info_block .info .desc {
+        font-size: 16px;
+        hyphens: auto;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    main .country_card .info_block .info {
+        min-width: 200px;
+        max-width: 200px;
+    }
+
+    main .country_card .info_block .btn,
+    main .tour_card_content .tour_card .info_block .btn {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+
+    .header_input input {
+        width: 250px;
+        font-size: 16px;
+        padding: 2px;
+    }
+
+    main .filter p {
+        font-size: bold;
+        font-size: 28px;
+    }
+
+    main .filter ul li {
+        font-size: 14px;
+    }
+}

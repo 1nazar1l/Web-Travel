@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block header_img %}
+    <img src="{% static "/img/country/" %}{{country.image_name}}.jpg" alt="">
+{% endblock  %}
+
+{% block title %}{{country.name}}{% endblock %}
+
+{% block input %}
+<div class="header_input"></div>
+{% endblock %}
+
+{% block content %}
+    <main>
+
+        <div class="full_desc">
+            {{country.full_desc}}
+        </div>
+
+        {% include "filter.html" with category=category %}
+        <div class="content container-fluid row">
+            {% for tour in tours %}
+                <div class="tour_card_content col-lg-4 col-md-6">
+                    <div class="tour_card" data-categories="{% for item in tour.category.all %}{{ item.slug }} {% endfor %}">
+                        <div class="img_block mb-2">
+                            <img src="{% static "/img/tour/" %}{{tour.image_name}}.jpg" alt="{{tour.image_name}}">
+                        </div>
+                        <div class="info_block">
+                            <div class="name">{{tour.name}}</div>
+                            <div class="grade_block mb-3">
+                                <i class="fa-solid fa-star me-2" style="color: yellow; font-size: 25px;"></i>
+                                <div class="grade me-2" style="font-size: 20px;">{{tour.rating}}</div>
+                                <div class="views">({{tour.views}} Просмотра)</div>
+                            </div>
+                            <div class="desc mb-2">{{tour.short_desc}}</div>
+                            <div class="categories d-flex ps-0 mb-3">
+                                {% for item in tour.category.all %}
+                                    <i class="fa-solid fa-{{item.icon_url}} mx-1"></i>
+                                {% endfor %}
+                            </div>
+                            <a class="btn btn-primary" href={% url "tour" tour.id %} >Выбрать</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock  %}
+
+{% block script %}
+<script src="{% static "./js/tours.js" %}"></script>
+{% endblock %}

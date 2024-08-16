@@ -1,0 +1,10 @@
+{% block filter %}
+<div class="filter">
+    <p>Категории</p>
+    <ul id="categoryList">
+        {% for item in category %}
+            <li data-category="{{ item.slug }}">{{item.name}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock  %}
