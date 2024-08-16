@@ -30,3 +30,5 @@ def tours(request):
     tours = Tour.objects.all()
     return render(request, 'tours.html', {'category': category, 'tours': tours})
 
+def about(request):
+    return render(request, 'about.html')
